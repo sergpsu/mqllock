@@ -1,0 +1,232 @@
+1.0.056 
+- fixed CMemoryManager
+- improved Time* functions
+
+1.0.058
+- added real/demo accounts detection
+- support 445 mt4 build
+
+1.0.059
+- fixed crash because of wrong memory scanning 
+- debug version opens %temp% folder with mll.log selected instead of url
+
+1.0.060
+- vmp_header was changed: added memory and constants protection
+- added rev parameter to .lic url
+
+1.0.062
+- added initGlobals(), clearGlobals()
+- fixed indicators + account_no + GetWindowText issue
+- added revision and project id part into message box title
+
+1.0.064
+- changed expiration compare: now server time is used as base, not local
+- added SECURITY_FLAG_IGNORE_REVOCATION to https requests
+- fixed multiple error dialogs if lic server not responding
+- add +1day to pp_expiration so vendor will have 1 day buffer to pay
+
+1.0.066
+- fixed MLRVInit and MLRVClose for obfuscated dlls
+
+1.0.067
+- fixed deinit freezing issue
+
+1.0.068
+- added stamp for mt4gui detection
+- fixed StringSubstr
+
+1.0.069
+- fixed insufficient license in case of frequent timeframe switch
+- added setEx4Name()
+
+1.0.070
+- using CSubclasser2 class instead of GWLP_WNDPROC for hooking chart else it did not work with mt4gui
+- fixed indicator crash issue when restarting mt4 with 2 charts with same indicator applied
+
+1.1.071
+- changed lstrcmp() to strcmp() to make strings comparisson same as mql
+- CheckMLValidity and tryInit() are inline so each exported function contains full function body instead of call
+- fixed possible crash when scanning memory for accounts list ( exclude guarded blocks )
+- changed optimization options inside .bat else functions with same body were linked to same address
+
+1.1.072
+- increased CMemoryManager ttl to 1000 due to crash reports
+
+1.3.076
+- added support of utf8 revision-based update and hold messages 
+- fixed StringGetChar signed/unsigned issue
+	14.09.2013
+- added try-catch
+- fixed using object after being deleted 
+	19.10.2013
+- threadGuardian is not looping anymore. Instead it is being recreated from tryInit()
+- Globals's members are protected by checksum ( md5 )
+	25.10.2013
+- added mutex access to Globals::ex4Name because call of setEx4Name from few charts caused crash
+	29.10.2013
+- replaced CSimpleArray to CAtlArray due to unknown crashes of CSimpleArray::Add
+	30.10.2013
+- replaced InternetOpen option from INTERNET_OPEN_TYPE_DIRECT to INTERNET_OPEN_TYPE_PRECONFIG
+	31.10.2013
+- changed CMemoryManager allocating algorythms
+	07.11.2013
+- fixed StringFind (2) substr null case
+	08.11.2013
+- fixed bug with strings obfuscation ( symult. init of string with adding to g_strings )
+- changed log files structure
+	11.11.2013
+- verifying if running from terminal.exe. If not ( e.g. loaded by other process because of SetWindowsHookEx ) no actions inside DllMain done
+- fixed useEx4Name result validation -  if( *ex4Name ) instead of if( ex4Name ) 
+
+1.3.077 
+- prevent usage of NULL xml nodes 'public_email' and 'public_name'. Due to bug on vendor web page, these fields were mostly not filled so dll crashed on read access
+	25.01.2014
+- excluded offset 0x1d4 as criterion of account number detection because of possibility of non-latin chars ( e.g. ЗАО Нефтепромбанк )
+	28.01.2014
+- added mt4 build detection and verification.
+	12.02.2014
+- removed verifyThreadGuardian from DLL_THREAD_DETACH
+- removed waitForGuardianThread() call from clearGlobals(), it didn't work from DllMain
+- added waitForGuardianThread() into deinit() on g_instances==0
+- removed stopThread() from ~CMemoryManager ( which is called from DllMain )
+- added CMemoryManager::stop() call into deinit()
+- added CMemoryManager::start() call into tryInit()
+
+2.4.101
+- fixed crash caused by infinite loop inside CGLobalIndicator::wndThread. It didn't stop after dll was unloaded
+- fixed crash caused by CXMLNode::CXMLNode( const CXMLNode* xml ) unintialized text and name members
+
+2.4.102
+- fixed crash caused by wrong reinitialization of CMemoryManager blocks ( occured for example when timeframe changed: CM thread restarted without initializing blocks )
+- changed CW2A usage to WideCharToMultiByte inside xml parser because of toooooo low speed
+- added Globals::lastLicenseVerificationTime to avoid to frequent xml loading ( for example when timeframe is changed frequently )
+
+2.4.103
+- changed isTimePassed behaviour: if $start==0 ( which usually means the first call ) result is TRUE
+- dns verification will only close chart for !127.0.0.1 and will close mt4 for 127.0.0.2
+12.03.2014 - update due to manual hack of protected mq4: all checkml-containing functions were removed.
+- added verifyThreadGuardian to CM::threadProc
+- added verification of FLG_AUTH_OK in 2 minutes after start into guardian thread
+
+2.4.104
+- for RV users ttl is 15min to allow fetching vars updates frequently. If no RV node then ttl is default - 24h ( see 2.4.102 notes )
+
+2.4.105
+- fixed RV ttl from 2.4.104
+- modified AU to support new directory structure - {datadir} support
+
+2.4.106
+- handling chart WM_DESTROY
+- deinit removes cd from g_charts before sending _WM_REMOVE_ICON
+- changed init/deinit logics: they ignore DEINIT_REASON_PARAMETERS
+- fixed dbg( wchar_t ) - wrong encrypted log was produced
+- changed QS_ALLEVENTS to QS_ALLINPUT
+- CGlobalIndicator::wndThread changed hwnd to 0 as param of PeekMessage
+- improved exception handling
+- added client's enabling due to vendor page changes
+
+2.4.107
+- added CLogger
+- added /portable mode support for au
+- removed iconProc, instead WM_SETCURSOR is handled from chartProc
+- changed memory scan algorythm for accounts detection. On WinXP accounts were not detected with old algorythm
+- fixed xml unicode problem - after converting from utf-8 strings were not 0-terminated
+
+2.4.108
+- added DEINIT_REASON_CHARTCHANGE to ignored deinit reasons
+- replaced setEx4Name with setInfo
+- added LGT_INFO logger type
+- fixed account detection bug in isRealDemoOffset()
+- ping v0 implemented
+
+2.4.109
+- replaced account detection criteria 'server official name' to 'server ip:port'
+- autolicense (still developing)
+- ping v3 implemented(still developing)
+mql:
+- cpp init() return value is always checked now to avoid calling of setinfo() in case of auth failure and chart close. In this case something stucks in mt4
+
+2.4.110 prerelease
+TODO: 
+1. VMP protect sendPing() - ultimate
+
+- license ttl without RV reduced from 24h to 1h
+- debug icon re-implemented
+- additional project.info file is put into each %temp%\mll-* debug directory to be able to know project and revision ids if logs are zipped without mll-* directory
+- license is reloaded on init if ttl passed
+
+2.4.110
+- had to revert to previous state, previous psu stated changes (since 7/18/2014) are lost on production server but they are still in [psu] server available. We need to implement the changes 1 by 1 slowly
+
+2.4.119
+- cid dlg error differs from others errors
+- multithread lic loading from all servers simultaneously
+
+2.4.121
+- multithread lic loading bugfix
+
+2.4.122
+- encrypted lic xml nodes and texts 
+
+2.4.123
+- bugfix from 2.4.122. 2.4.122 is invalid
+
+2.4.124
+- account number is sent to server to reduce lic size sent back
+
+2.5.130
+- reduced traffic and improved security by not sending l/p and receipts to dll
+- bugfix: salt generation
+
+2.5.131
+- remote update notification is also shown for expired revisions
+
+2.5.132
+- bugfix: CXMLNodeEnc copy constructor
+
+2.5.133
+- improved protection by adding verifyAuth() and verifyThreadGuardian() into CheckMLValidity
+- terminating thread is followed by memory full allocation and CPU halt commands
+
+2.5.134
+- enabled debugger presence and image crc verification back
+- terminate process if attempt to close chart failed
+- terminate process if dns verification failed with any ip resolved
+
+2.5.135
+- when choosing between few functions to assign Ultra protection level we choose the one with CheckMLValidity
+- added internal verifications of auth complete and guardian thread running
+
+2.5.136
+- CheckMLValidity internal verifications from 2.5.135 are done periodically in 3-5 seconds. This increased speed significally
+
+2.5.137
+- bugfix: tryInit license TTL was not working because of preceeding verifications
+- bugfix( auth speed ): dead servers caused long timeout while HttpSendRequestA was trying to connect
+- removed ping thread start
+
+2.5.138
+- redis stats are posted 
+
+2.5.139
+- bugfix: StringSetChar for NULL input
+
+2.5.140
+- bugfix: with no internet connection auth was looping infinite
+
+2.5.141
+2.5.142
+- added fdbg() to debug lic verifications failures
+
+2.5.143
+2.5.144
+- ignore internet errors on re-validation and do not close chart in this case
+
+2.5.145
+- bugfix: accounts expiration was not detected correctly
+
+2.5.146
+- bugfix: invalid error displayed in case of auth failure caused by internet problems. Added FLG_REAUTH
+
+2.5.147
+- bugfix: CMemoryManager allocated deafult buffer size even if required memory size was bigger

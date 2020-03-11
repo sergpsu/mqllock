@@ -1,0 +1,489 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// Neutral resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_NEU)
+LANGUAGE LANG_NEUTRAL, SUBLANG_NEUTRAL
+#pragma code_page(1251)
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_LOCAL_LOGIN DIALOGEX 0, 0, 228, 134
+STYLE DS_SYSMODAL | DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | DS_CENTER | WS_POPUP | WS_CAPTION | WS_SYSMENU
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "",IDOK,62,111,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,116,111,50,14
+    LTEXT           "Login:",IDC_STATIC,18,67,20,8
+    LTEXT           "Password:",IDC_STATIC,18,87,34,8
+    EDITTEXT        IDE_LOGIN,59,64,137,14,ES_AUTOHSCROLL
+    EDITTEXT        IDE_PASSWORD,59,84,137,14,ES_PASSWORD | ES_AUTOHSCROLL
+    LTEXT           "",IDC_SLOGAN,7,7,214,50
+END
+
+IDD_REMOTE_LOGIN DIALOGEX 0, 0, 228, 134
+STYLE DS_SYSMODAL | DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | DS_CENTER | WS_POPUP | WS_CAPTION | WS_SYSMENU
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "",IDOK,62,111,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,116,111,50,14
+    LTEXT           "Login:",IDC_STATIC,18,67,20,8
+    LTEXT           "Password:",IDC_STATIC,18,87,34,8
+    EDITTEXT        IDE_LOGIN,59,64,137,14,ES_AUTOHSCROLL
+    EDITTEXT        IDE_PASSWORD,59,84,137,14,ES_PASSWORD | ES_AUTOHSCROLL
+    LTEXT           "",IDC_SLOGAN,7,7,214,50
+END
+
+IDD_REGISTRATION1 DIALOGEX 0, 0, 209, 90
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | DS_CENTER | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "ML registration"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "Register",IDOK,92,67,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,146,67,50,14
+    LTEXT           "Name:",IDC_STATIC,18,23,22,8
+    LTEXT           "Email:",IDC_STATIC,18,43,20,8
+    EDITTEXT        IDE_NAME,59,20,137,14,ES_AUTOHSCROLL
+    EDITTEXT        IDE_EMAIL,59,40,137,14,ES_AUTOHSCROLL
+    CONTROL         "",IDC_PROGRESS1,"msctls_progress32",PBS_SMOOTH | WS_BORDER,6,71,78,6
+END
+
+IDD_REGISTRATION2 DIALOGEX 0, 0, 209, 90
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | DS_CENTER | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "ML registration"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "Finish",IDOK,53,67,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,107,67,50,14
+    LTEXT           "Code:",IDC_STATIC,53,41,20,8
+    EDITTEXT        IDE_CODE,94,38,62,14,ES_AUTOHSCROLL
+    LTEXT           "We have sent you registration code to your email",IDC_STATIC,32,13,159,8
+END
+
+IDD_REMOTE_UPDATE DIALOGEX 0, 0, 316, 90
+STYLE DS_SYSMODAL | DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | DS_CENTER | WS_POPUP | WS_CAPTION | WS_SYSMENU
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "Update now",IDOK,106,69,50,14
+    PUSHBUTTON      "Skip update",IDCANCEL,160,69,50,14
+    EDITTEXT        IDE_MESSAGE,7,7,302,52,ES_CENTER | ES_MULTILINE | ES_AUTOHSCROLL | ES_READONLY | NOT WS_BORDER
+END
+
+IDD_LOCAL_RECEIPT DIALOGEX 0, 0, 228, 110
+STYLE DS_SYSMODAL | DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | DS_CENTER | WS_POPUP | WS_CAPTION | WS_SYSMENU
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "",IDOK,62,87,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,116,87,50,14
+    LTEXT           "Receipt number:",-1,18,67,54,8
+    EDITTEXT        IDE_RECEIPT,73,64,123,14,ES_AUTOHSCROLL
+    LTEXT           "",IDC_SLOGAN,7,7,214,50
+END
+
+IDD_REMOTE_RECEIPT DIALOGEX 0, 0, 228, 113
+STYLE DS_SYSMODAL | DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | DS_CENTER | WS_POPUP | WS_CAPTION | WS_SYSMENU
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "",IDOK,62,89,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,116,89,50,14
+    LTEXT           "Receipt number:",-1,18,67,54,8
+    EDITTEXT        IDE_RECEIPT,77,64,121,14,ES_AUTOHSCROLL
+    LTEXT           "",IDC_SLOGAN,7,7,214,50
+END
+
+IDD_REMOTE_AUTO_UPDATE DIALOGEX 0, 0, 372, 141
+STYLE DS_SYSMODAL | DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | DS_CENTER | WS_POPUP | WS_CAPTION | WS_SYSMENU
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    PUSHBUTTON      "Update now",IDOK,98,118,79,14,WS_DISABLED
+    PUSHBUTTON      "Skip update",IDCANCEL,182,118,79,14
+    CONTROL         "",IDC_PROGRESS,"msctls_progress32",PBS_SMOOTH | WS_BORDER,7,121,64,7
+    LTEXT           "0%",IDC_PROGRESS_PERCENTS,76,120,21,8
+    ICON            "",IDC_AUTO_UPDATE,7,7,20,20
+    LTEXT           "Static",IDC_MESSAGE,61,7,304,69
+    CONTROL         "Support",IDC_AGREE,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,61,82,10,10
+    LTEXT           "Static",IDC_AGREEMENT,77,82,288,32
+    PUSHBUTTON      "Contact support",IDB_SUPPORT,284,118,79,14
+    LTEXT           "...",IDC_STATUS,7,108,82,8
+END
+
+IDD_REMOTE_AUTO_UPDATE_NOTIFICATION DIALOGEX 0, 0, 316, 124
+STYLE DS_SYSMODAL | DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | DS_CENTER | WS_POPUP | WS_CAPTION | WS_SYSMENU
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    PUSHBUTTON      "Contact vendor via email",IDOK,68,103,101,14
+    PUSHBUTTON      "Skip this for now",IDCANCEL,173,103,74,14
+    ICON            "",IDC_AUTO_UPDATE,7,7,21,20
+    LTEXT           "Static",IDC_MESSAGE,61,7,240,38
+    LTEXT           "Vendor Contact Name:",IDC_STATIC,61,56,74,8
+    LTEXT           "Static",IDC_NAME,140,57,160,8
+    LTEXT           "Vendor Contact Email:",IDC_STATIC,61,69,72,8
+    CONTROL         "<a>SysLink1</a>",IDC_EMAIL,"SysLink",0x0,138,68,163,14
+    LTEXT           "You are running ProjectID",IDC_STATIC,61,81,84,8
+    LTEXT           "Static",IDC_PID,150,81,160,8
+END
+
+IDD_REMOTE_AUTO_LOGIN DIALOGEX 0, 0, 365, 130
+STYLE DS_SYSMODAL | DS_SETFONT | DS_MODALFRAME | DS_SETFOREGROUND | DS_FIXEDSYS | DS_CENTER | DS_CENTERMOUSE | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_TOPMOST
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    PUSHBUTTON      "Cancel",IDCANCEL,160,110,50,14
+    DEFPUSHBUTTON   "Login",IDOK,105,110,50,14
+    LTEXT           "Email:",IDC_STATIC,69,37,20,8
+    EDITTEXT        IDE_LOGIN,69,47,211,14,ES_AUTOHSCROLL
+    EDITTEXT        IDE_PASSWORD,69,81,211,14,ES_PASSWORD | ES_AUTOHSCROLL
+    LTEXT           "Password:",IDC_STATIC,69,69,34,8
+    PUSHBUTTON      "Register now",IDB_REGISTER,310,110,50,14
+    LTEXT           "Slogan",IDC_SLOGAN,69,6,214,25
+    CONTROL         "",IDC_PROGRESS,"msctls_progress32",PBS_SMOOTH | WS_BORDER,13,112,80,7
+    ICON            IDI_AUTOLICENSE_AUTH,IDC_STATIC,6,6,21,20,SS_REALSIZEIMAGE
+    PUSHBUTTON      "Forgot password",IDB_FORGOT_PASSWORD,237,110,68,14
+END
+
+IDD_ERROR_WITH_INFO DIALOGEX 0, 0, 316, 130
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "MQLLock error"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "Email vendor",IDOK,260,59,50,14
+    PUSHBUTTON      "Close",IDCANCEL,259,79,50,14
+    LTEXT           "Static",IDC_TEXT,7,7,302,25
+    LTEXT           "Contact details",IDC_STATIC,7,37,49,8
+    LTEXT           "",IDC_CONTACT_DETAILS,7,50,249,72,0,WS_EX_CLIENTEDGE
+END
+
+IDD_ACCOUNT_REGISTRATION_CONFIRM DIALOGEX 0, 0, 253, 119
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | DS_CENTER | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "MQLLock account registration"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "Finish",IDOK,74,99,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,128,99,50,14
+    LTEXT           "Code:",IDC_STATIC,64,41,20,8
+    EDITTEXT        IDE_CODE,89,38,62,14,ES_AUTOHSCROLL
+    LTEXT           "We have sent you registration code to your email",IDC_STATIC,64,13,159,8
+    CONTROL         "",IDC_PROGRESS1,"msctls_progress32",WS_BORDER,6,103,61,6
+    ICON            IDI_AUTOLICENSE_REGISTER,IDC_STATIC,6,6,20,20,SS_REALSIZEIMAGE
+END
+
+IDD_ACCOUNT_REGISTRATION DIALOGEX 0, 0, 316, 186
+STYLE DS_SETFONT | DS_MODALFRAME | DS_SETFOREGROUND | DS_FIXEDSYS | DS_CENTER | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "MQLLock - Create new Account"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "Next",IDOK,106,165,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,160,165,50,14
+    LTEXT           "Email:",IDC_STATIC,79,42,20,8
+    EDITTEXT        IDE_EMAIL,79,53,211,14,ES_AUTOHSCROLL
+    EDITTEXT        IDE_PASSWORD,79,82,211,14,ES_PASSWORD | ES_AUTOHSCROLL
+    LTEXT           "Password:",IDC_STATIC,79,72,34,8
+    EDITTEXT        IDE_PASSWORD2,79,111,211,14,ES_PASSWORD | ES_AUTOHSCROLL
+    LTEXT           "Confirm password:",IDC_STATIC,79,100,61,8
+    CONTROL         "",IDC_PROGRESS1,"msctls_progress32",PBS_SMOOTH | WS_BORDER,6,168,80,7
+    ICON            IDI_AUTOLICENSE_REGISTER,IDC_STATIC,6,6,21,20,SS_REALSIZEIMAGE
+    LTEXT           "Please fill all fields in order to create an account with mqllock. You can use this account for all your mqllock licences. You need to confirm your email address in order to activate.",IDC_STATIC,79,6,232,29
+    LTEXT           "Captcha:",IDC_STATIC,79,129,30,8
+    EDITTEXT        IDE_CAPTCHA,79,139,48,14,ES_AUTOHSCROLL
+    CONTROL         "",IDC_CAPTCHA,"Static",SS_BLACKFRAME,134,131,57,22
+    PUSHBUTTON      "",IDB_REFRESH,196,141,13,12
+END
+
+IDD_ACCOUNT_FORGOT_PASSWORD DIALOGEX 0, 0, 316, 186
+STYLE DS_SETFONT | DS_MODALFRAME | DS_SETFOREGROUND | DS_FIXEDSYS | DS_CENTER | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "MQLLock - Forgot account password"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "Update",IDOK,106,165,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,160,165,50,14
+    LTEXT           "Email:",IDC_STATIC,79,42,20,8
+    EDITTEXT        IDE_EMAIL,79,53,211,14,ES_AUTOHSCROLL
+    EDITTEXT        IDE_PASSWORD,79,82,211,14,ES_PASSWORD | ES_AUTOHSCROLL
+    LTEXT           "New password:",IDC_STATIC,79,72,50,8
+    EDITTEXT        IDE_PASSWORD2,79,111,211,14,ES_PASSWORD | ES_AUTOHSCROLL
+    LTEXT           "Confirm password:",IDC_STATIC,79,100,61,8
+    CONTROL         "",IDC_PROGRESS1,"msctls_progress32",PBS_SMOOTH | WS_BORDER,6,168,80,7
+    ICON            IDI_AUTOLICENSE_REGISTER,IDC_STATIC,6,6,20,20,SS_REALSIZEIMAGE
+    LTEXT           "Please fill all fields in order to restore password to your MQLLock account. We will send you confirmation link to your email address. You will have to open this link in order to confirm password change.",IDC_STATIC,79,6,226,29
+    LTEXT           "Captcha:",IDC_STATIC,79,129,30,8
+    EDITTEXT        IDE_CAPTCHA,79,139,48,14,ES_AUTOHSCROLL
+    CONTROL         "",IDC_CAPTCHA,"Static",SS_BLACKFRAME,134,131,57,22
+    PUSHBUTTON      "",IDB_REFRESH,196,141,13,12
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO
+BEGIN
+    IDD_LOCAL_LOGIN, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 221
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 127
+    END
+
+    IDD_REMOTE_LOGIN, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 221
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 127
+    END
+
+    IDD_REMOTE_UPDATE, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 309
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 83
+    END
+
+    IDD_LOCAL_RECEIPT, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 221
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 103
+    END
+
+    IDD_REMOTE_RECEIPT, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 221
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 106
+    END
+
+    IDD_REMOTE_AUTO_UPDATE, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 365
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 134
+    END
+
+    IDD_REMOTE_AUTO_UPDATE_NOTIFICATION, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 309
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 117
+    END
+
+    IDD_REMOTE_AUTO_LOGIN, DIALOG
+    BEGIN
+        LEFTMARGIN, 6
+        RIGHTMARGIN, 360
+        TOPMARGIN, 6
+        BOTTOMMARGIN, 124
+    END
+
+    IDD_ERROR_WITH_INFO, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 309
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 123
+    END
+
+    IDD_ACCOUNT_REGISTRATION_CONFIRM, DIALOG
+    BEGIN
+        LEFTMARGIN, 6
+        RIGHTMARGIN, 247
+        TOPMARGIN, 6
+        BOTTOMMARGIN, 113
+    END
+
+    IDD_ACCOUNT_REGISTRATION, DIALOG
+    BEGIN
+        LEFTMARGIN, 6
+        RIGHTMARGIN, 309
+        TOPMARGIN, 6
+        BOTTOMMARGIN, 179
+    END
+
+    IDD_ACCOUNT_FORGOT_PASSWORD, DIALOG
+    BEGIN
+        LEFTMARGIN, 6
+        RIGHTMARGIN, 309
+        TOPMARGIN, 6
+        BOTTOMMARGIN, 179
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDI_ICON1               ICON                    "lock.ico"
+
+IDI_AUTO_UPDATE         ICON                    "autoupdate.ico"
+
+IDI_AUTOLICENSE_AUTH    ICON                    "11.ico"
+
+IDI_AUTOLICENSE_REGISTER ICON                    "33.ico"
+
+IDI_REFRESH             ICON                    "restart.ico"
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// RST
+//
+
+IDR_RESTARTER           RST                     "restarter.exe"
+
+#endif    // Neutral resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// Russian (Russia) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_RUS)
+LANGUAGE LANG_RUSSIAN, SUBLANG_DEFAULT
+#pragma code_page(1251)
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_DEBUG DIALOGEX 0, 0, 176, 53
+STYLE DS_SYSMODAL | DS_SETFONT | DS_MODALFRAME | DS_SETFOREGROUND | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_TOPMOST
+CAPTION "Debug"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    LTEXT           "Instances:",IDC_STATIC,1,36,35,8
+    LTEXT           "Project ID:",IDC_STATIC,1,6,36,8
+    EDITTEXT        IDE_PID,53,3,40,14,ES_AUTOHSCROLL | ES_READONLY
+    EDITTEXT        IDE_INSTANCES,53,33,40,14,ES_AUTOHSCROLL | ES_READONLY
+    LTEXT           "Email:",IDC_STATIC,1,21,20,8
+    EDITTEXT        IDE_EMAIL,53,18,113,14,ES_AUTOHSCROLL | ES_READONLY
+END
+
+IDD_CID_ERROR DIALOGEX 0, 0, 316, 119
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | DS_CENTER | WS_POPUP | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_TOPMOST
+CAPTION "e"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,53,96,50,14
+    LTEXT           "Static",IDC_TEXT,7,7,302,43
+    LTEXT           "Static",IDC_TEXT2,7,55,302,33
+    PUSHBUTTON      "Copy CID to clipboard",IDB_COPY_CID,111,96,90,14
+    PUSHBUTTON      "Email vendor",IDB_EMAIL_VENDOR,209,96,50,14
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO
+BEGIN
+    IDD_DEBUG, DIALOG
+    BEGIN
+        LEFTMARGIN, 1
+        RIGHTMARGIN, 169
+        BOTTOMMARGIN, 50
+    END
+
+    IDD_CID_ERROR, DIALOG
+    BEGIN
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// AFX_DIALOG_LAYOUT
+//
+
+IDD_CID_ERROR AFX_DIALOG_LAYOUT
+BEGIN
+    0
+END
+
+#endif    // Russian (Russia) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// Ukrainian (Ukraine) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_UKR)
+LANGUAGE LANG_UKRAINIAN, SUBLANG_DEFAULT
+#pragma code_page(1251)
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+#endif    // Ukrainian (Ukraine) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+
