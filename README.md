@@ -5,4 +5,4 @@ MQLLock.com project was created to protect MetaTrader4 ex4 files from decompilat
 Also licensing was added to protect vendors from stealing their code and unwanted scripts usage.
 
 Though DLL was protected with VMProtect, it contained internal protection. 
-These sources can be interested for the ones who ever tried to crack protected files.
+These sources can be interesting for the ones who ever tried to crack protected files.
